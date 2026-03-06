@@ -1,41 +1,5 @@
 import React from 'react'
 import { useState } from 'react';
-// import sound from "../assets/sound.mp3"
-
-
-
-// function PlayMusic() {
-
-//     function play() {
-//         new Audio(Music[0]).play()
-//     }
-
-// const Music = [sound]
-
-//   return (
-//     <div className=' flex p-6 w-200 h-50 bg-amber-700'>
-
-//         <button 
-//             className='h-40 w-40 bg-red-600 hover:bg-red-700 '
-//             onClick={play}>
-//                 play
-
-//         </button>
-
-        
-
-
-
-      
-
-
-//     </div>
-//   )
-// }
-
-// export default PlayMusic
-
-
 
 function PlayMusic({ title = "Track Title", audioSrc }) {
   const [isPlaying, setIsPlaying] = useState(false);

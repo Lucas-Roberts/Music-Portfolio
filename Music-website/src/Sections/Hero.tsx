@@ -1,8 +1,8 @@
-import React from 'react'
+
 
 function Hero() {
   return (
-        <section className="flex items-center w-full h-dvh pb-50 bg-gray-800 text-white py-24">
+    <section id="About" className="flex items-center w-full h-[calc(100dvh-4rem)] pb-50 bg-gray-800 text-white py-24">
       <div className="max-w-6xl mx-auto px-6 text-center">
         <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
           Discover Your Next Favorite Sound
