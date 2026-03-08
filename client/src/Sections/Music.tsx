@@ -1,31 +1,39 @@
-import React from 'react'
-import { useEffect, useState } from 'react'
-import axios from 'axios'
+import { useEffect, useState } from "react"
+import { getSongs } from "../services/songs"
+import SongCard from "../components/SongCard"
+
+type Song = {
+  _id: string
+  title: string
+  description: string
+  releaseDate: string
+  audioFile: {
+    asset: {
+      url: string
+    }
+  }
+}
 
 function Music() {
-
-  const[songs, setSongs] = useState([])
-
-  const fetchAPI = async () => {
-    const response = await axios.get("http://localhost:8080/api")
-    setSongs(response.data.fruits)
-    console.log(response.data.fruits);
-  };
+  const [songs, setSongs] = useState<Song[]>([])
 
   useEffect(() => {
-    fetchAPI();
-  }, []);
+    const fetchSongs = async () => {
+      const data = await getSongs()
+      setSongs(data)
+    }
+
+    fetchSongs()
+  }, [])
 
   return (
-    <section id='Music' className=' flex items-center justify-center h-[calc(100dvh-4rem)] w-full bg-yellow-50'>
-
-
-
-
-    {songs}
-
-
-
+    <section
+      id="Music"
+      className="flex flex-wrap justify-cente min-h-[calc(100dvh-4rem)] w-full bg-gray-800 p-10"
+    >
+      {songs.map((song) => (
+        <SongCard key={song._id} song={song} />
+      ))}
     </section>
   )
 }
