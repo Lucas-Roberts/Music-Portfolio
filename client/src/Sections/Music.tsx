@@ -29,8 +29,10 @@ function Music() {
   return (
     <section
       id="Music"
-      className="flex flex-wrap justify-cente min-h-[calc(100dvh-4rem)] w-full bg-gray-800 p-10"
+      className="flex flex-col flex-wrap items-center min-h-[calc(100dvh-4rem)] w-full bg-gray-800"
     >
+
+
       {songs.map((song) => (
         <SongCard key={song._id} song={song} />
       ))}
