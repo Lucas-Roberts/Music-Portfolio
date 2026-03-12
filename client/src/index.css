@@ -4,9 +4,8 @@ html {
     scroll-behavior: smooth;
 }
 
-.waveform-time {
-    color: #000000 !important;
-    font-size: small !important;
+.waveform-info {
+    display: none !important;
 }
 
 

@@ -6,7 +6,7 @@ export default function Navbar() {
   const tabs = ["About", "Music", "Contact"];
 
   return (
-    <nav className="fixed top-0 min-w-full bg-gray-900 text-white border-b border-b-gray-600/80">
+    <nav className="fixed top-0 min-w-full bg-gray-900/90 text-white border-b border-b-gray-600/80">
       <div className="min-w-full px-7 max-w-6xl mx-auto">
         <div className="flex items-center justify-between h-16">
 
